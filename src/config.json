@@ -1,0 +1,29 @@
+{
+  "name": "Hackspace Manchester",
+  "integrations": {
+    "mqtt": {
+      "server": "test.mosquitto.org",
+      "maxMessagesPerTopic": 5
+    }
+  },
+  "notification": {
+    "default": 10000
+  },
+  "socket": {
+    "port": 3001,
+    "server": "localhost"
+  },
+  "sidebar": {
+    "screens": [
+      { "name": "Recent", "time": 2000 },
+      { "name": "Metrolink", "time": 4000 }
+    ]
+  },
+  "main": {
+    "screens": [
+      { "name": "Meeting", "time": 10 },
+      { "name": "Metrolink", "time": 10 },
+      { "name": "Welcome", "time": 10 }
+    ]
+  }
+}

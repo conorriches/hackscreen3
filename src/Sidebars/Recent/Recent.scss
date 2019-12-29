@@ -1,0 +1,25 @@
+.Sidebar {
+  .Recent {
+    background: white;
+    h2 {
+      margin: 0;
+    }
+
+    ul {
+      padding: 0;
+      list-style: none;
+
+      li {
+        padding: 1em;
+        color: black;
+        text-indent: 0;
+        border-bottom: 2px solid black;
+        margin-bottom: 1em;
+
+        small {
+          float: right;
+        }
+      }
+    }
+  }
+}

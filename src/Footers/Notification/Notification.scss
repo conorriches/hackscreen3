@@ -1,0 +1,12 @@
+.Notification {
+  background: white;
+  height: 100%;
+  font-size: 2.8em;
+
+  &__type {
+    margin: 0 0.2em;
+  }
+
+  &__message {
+  }
+}

@@ -1,0 +1,112 @@
+@import url("https://fonts.googleapis.com/css?family=Asap&display=swap");
+
+.Screen {
+  h1 {
+    font-size: 5em;
+    margin: 0;
+  }
+
+  h2 {
+    font-size: 3.5em;
+    margin: 0;
+  }
+
+  h3 {
+    font-size: 3em;
+    margin: 0;
+  }
+}
+.Sidebar {
+  h1 {
+    font-size: 3em;
+    margin: 0;
+  }
+
+  h2 {
+    font-size: 2em;
+    margin: 0;
+  }
+
+  h3 {
+    font-size: 1em;
+    margin: 0;
+  }
+}
+.App {
+  $block: &;
+  height: 100%;
+  width: 100%;
+  font-family: "Asap", sans-serif;
+  background: linear-gradient(to top, blue, black);
+
+  &--notification {
+    .Notification {
+      background: yellow;
+    }
+  }
+
+  &__container {
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-areas:
+      "menu menu menu main main main main main main main main main"
+      "menu menu menu main main main main main main main main main"
+      "menu menu menu main main main main main main main main main"
+      "menu menu menu main main main main main main main main main"
+      "menu menu menu main main main main main main main main main"
+      "menu menu menu footer footer footer footer footer footer footer footer footer";
+    grid-auto-columns: 1fr;
+    grid-auto-rows: 1fr;
+    row-gap: 0.8em;
+    column-gap: 0.8em;
+
+    & > div {
+      background: white;
+    }
+  }
+}
+
+.SidebarWrapper {
+  grid-area: menu;
+  overflow: hidden;
+}
+
+.MainWrapper {
+  grid-area: main;
+  overflow: hidden;
+}
+
+.FooterWrapper {
+  grid-area: footer;
+  overflow: hidden;
+}
+
+.Screen {
+  width: 100%;
+  height: 100%;
+  display: inline-block;
+  transition: opacity 0.4s ease-in-out;
+  opacity: 1;
+
+  &--Transition {
+    opacity: 0;
+  }
+
+  & > div {
+    height: calc(100% - 2em);
+    width: calc(100% - 2em);
+    display: inline-block;
+    padding: 1em;
+  }
+}
+
+.Sidebar {
+  transition: opacity 0.4s ease-in-out;
+  height: 100%;
+  > div {
+    height: calc(100% - 2em);
+    width: calc(100% - 2em);
+    padding: 1em;
+  }
+}

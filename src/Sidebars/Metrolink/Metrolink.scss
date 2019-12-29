@@ -1,0 +1,21 @@
+.Sidebar {
+  .Metrolink {
+    background: #ffde4b;
+
+    &__Item {
+      margin-bottom: 1em;
+      background: white;
+      padding: 1em;
+      border-radius: 10px;
+
+      &:first-of-type {
+        margin-top: 1em;
+      }
+    }
+
+    &__Time {
+      display: block;
+      font-size: 3em;
+    }
+  }
+}

@@ -1,0 +1,10 @@
+.Clock {
+  height: 100%;
+  display: inline-block;
+
+  .inner {
+    font-size: 4em;
+    margin: 0 0.1em;
+    padding: 0;
+  }
+}
