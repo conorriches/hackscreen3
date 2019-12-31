@@ -12,7 +12,11 @@ class Clock extends Component {
     let splitDate = this.state.time.toLocaleTimeString().split(":");
     return (
       <div className="Clock">
-        <div className="inner">{`${splitDate[0]}:${splitDate[1]}`}</div>
+        <div className="Clock__Inner">
+          {splitDate[0]}
+          <span className="Clock__Colon">:</span>
+          {splitDate[1]}
+        </div>
       </div>
     );
   }

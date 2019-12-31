@@ -4,8 +4,7 @@ import classnames from "classnames";
 import Config from "./config.json";
 import Sidebar from "./Sidebar";
 import Screen from "./Screen";
-import Clock from "./Components/Clock/Clock";
-import Notification from "./Footers/Notification/Notification";
+import Footer from "./Footer";
 import DataContext from "./DataContext";
 import "./App.scss";
 
@@ -37,8 +36,7 @@ const reducer = (state, action) => {
       if (data.topic === "cone/door/outer/opened") {
         state.mqtt[data.topic].splice(0, 0, {
           name: data.message,
-          time: `${now.getHours() < 10 ? "0" : ""}
-          ${now.getHours()}:${
+          time: `${now.getHours() < 10 ? "0" : ""}${now.getHours()}:${
             now.getMinutes() < 10 ? "0" : ""
           }${now.getMinutes()}`
         });
@@ -47,7 +45,7 @@ const reducer = (state, action) => {
           message: data.message
         });
       }
-      return state;
+      return Object.assign({}, state);
     default:
       throw new Error();
   }
@@ -55,7 +53,7 @@ const reducer = (state, action) => {
 const App = () => {
   const [notification, setNotification] = useState("");
   const [notificationTimer, setNotificationTimer] = useState(0);
-  const [state, dispatch] = useReducer(reducer, {});
+  const [state, dispatch] = useReducer(reducer, { integrations: {} });
 
   useEffect(() => {
     socket.on("NOTIFICATION", obj => {
@@ -89,11 +87,7 @@ const App = () => {
             <Screen />
           </div>
           <div className="FooterWrapper">
-            {notification ? (
-              <Notification type="entered" message={notification} />
-            ) : (
-              <Clock />
-            )}
+            <Footer notification={notification} />
           </div>
         </div>
       </div>

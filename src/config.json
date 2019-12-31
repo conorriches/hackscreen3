@@ -15,15 +15,15 @@
   },
   "sidebar": {
     "screens": [
-      { "name": "Recent", "time": 2000 },
-      { "name": "Metrolink", "time": 4000 }
+      { "name": "Metrolink", "time": 20 },
+      { "name": "Recent", "time": 20 }
     ]
   },
   "main": {
     "screens": [
-      { "name": "Meeting", "time": 10 },
+      { "name": "Welcome", "time": 20 },
       { "name": "Metrolink", "time": 10 },
-      { "name": "Welcome", "time": 10 }
+      { "name": "Meeting", "time": 20 }
     ]
   }
 }

@@ -24,16 +24,11 @@ class mqtt extends Integration {
 
     thisClass.client.on("message", function(topic, message) {
       logger.verbose(`MQTT receive: ${topic}: ${message}`);
-      if (topic === "cone/door/outer/opened") {
-        thisClass.callback("notification", {
-          topic,
-          message: message.toString()
-        });
-      } else if (topic === "testing/test/b") {
-        thisClass.callback("state", {
-          theState: message
-        });
-      }
+
+      thisClass.callback("notification", {
+        topic,
+        message: message.toString()
+      });
     });
   }
 

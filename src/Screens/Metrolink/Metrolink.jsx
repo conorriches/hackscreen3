@@ -17,6 +17,12 @@ const Metrolink = () => {
         <TramPlatform title="Inbound" tramData={data.inbound} />
         <TramPlatform title="Outbound" tramData={data.outbound} />
       </div>
+      <div className="Metrolink__Inner">
+        <span className="Metrolink__Message">{data.message}</span>
+        <span className="Metrolink__LastUpdated">
+          Last Updated: {data.lastUpdated}
+        </span>
+      </div>
     </div>
   );
 };
@@ -38,7 +44,7 @@ const TramPlatform = ({ tramData, title }) => {
                 >
                   <div className="Tram__Destination">{tram.destination}</div>
                   <div className="Tram__Time">
-                    {tram.time == 0 ? "arrv" : `${tram.time} mins`}
+                    {tram.time === 0 ? "arrv" : `${tram.time} mins`}
                   </div>
                 </div>
               );

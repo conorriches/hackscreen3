@@ -1,12 +1,15 @@
 .Notification {
   background: white;
   height: 100%;
-  font-size: 2.8em;
+  width: 100%;
+  display: flex;
+  font-size: 3em;
 
   &__type {
-    margin: 0 0.2em;
+    margin: 0.3em;
   }
 
   &__message {
+    padding: 0.3em;
   }
 }

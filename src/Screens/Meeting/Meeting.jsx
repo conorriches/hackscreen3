@@ -27,7 +27,7 @@ const months = [
 const Meeting = () => {
   const firstMondayOfMonth = (year, month) => {
     let toReturn;
-    [1, 2, 3, 4, 5, 6, 7].map(day => {
+    [1, 2, 3, 4, 5, 6, 7].forEach(day => {
       const dateStr = `${year}-${month + 1 < 10 ? "0" : ""}${month +
         1}-0${day}`;
       const thisDay = new Date(dateStr);
@@ -37,28 +37,23 @@ const Meeting = () => {
   };
 
   const now = new Date();
-  const meetingMonths = [0, 2, 4, 6, 8, 10];
-  const thisMonth = now.getMonth();
-  const firstMondayOfThisMonth = firstMondayOfMonth(
-    now.getFullYear(),
-    now.getMonth()
-  );
+  const meetingMonths = [1, 3, 5, 7, 9, 11];
 
   //Get all meetings this and next year
   const meetings = [];
-  meetingMonths.map(m => {
+  meetingMonths.forEach(m => {
     const dateStr = `${now.getFullYear()}-${m < 10 ? "0" : ""}${m +
       1}-0${firstMondayOfMonth(now.getFullYear(), m)}`;
     meetings.push(new Date(dateStr));
   });
-  meetingMonths.map(m => {
+  meetingMonths.forEach(m => {
     const dateStr = `${now.getFullYear() + 1}-${m < 10 ? "0" : ""}${m +
       1}-0${firstMondayOfMonth(now.getFullYear() + 1, m)}`;
     meetings.push(new Date(dateStr));
   });
 
   let nextMeeting = meetings.filter(m => m >= now)[0];
-  let postfix = "th";
+  let postfix;
   const lastDigit = nextMeeting
     .getDate()
     .toString()
@@ -74,20 +69,20 @@ const Meeting = () => {
     case "3":
       postfix = "rd";
       break;
+    default:
+      postfix = "th";
   }
   return (
     <div className="Meeting">
       <div className="Meeting__Next">
-        <h3>The next members' meeting will be on:</h3>
+        <h3>Next members' meeting:</h3>
 
         <div className="Meeting__Date">
           {days[nextMeeting.getDay()]} {nextMeeting.getDate()}
           {postfix} {months[nextMeeting.getMonth()]}
         </div>
         <h3>at 7pm</h3>
-        <div className="Meeting__Pattern">
-          First Monday, every other month, starting January.
-        </div>
+        <div className="Meeting__Pattern">First Monday, every other month.</div>
       </div>
     </div>
   );

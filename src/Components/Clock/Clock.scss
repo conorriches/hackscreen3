@@ -2,9 +2,28 @@
   height: 100%;
   display: inline-block;
 
-  .inner {
-    font-size: 4em;
-    margin: 0 0.1em;
+  &__Inner {
+    font-size: 1em;
+    margin: 0.1em 0.2em;
     padding: 0;
+  }
+
+  &__Colon {
+    position: relative;
+    top: -5px;
+
+    animation: fadeColon 2s infinite ease-in-out;
+
+    @keyframes fadeColon {
+      0% {
+        color: black;
+      }
+      50% {
+        color: white;
+      }
+      100% {
+        color: black;
+      }
+    }
   }
 }

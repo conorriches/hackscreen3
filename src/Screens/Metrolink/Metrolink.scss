@@ -34,7 +34,6 @@
       font-size: 2em;
       margin-bottom: 0.3em;
       overflow: hidden;
-      height: 1.5em;
 
       & > div {
         animation: fadein 0.5s ease-out;
@@ -65,6 +64,10 @@
         }
       }
     }
+
+    &__Message {
+      font-size: 1.3em;
+    }
   }
 
   .Tram {
@@ -78,6 +81,7 @@
       color: black;
       padding: 0.2em 0.2em;
       border-radius: 10px;
+      display: inline-table;
     }
   }
 }
