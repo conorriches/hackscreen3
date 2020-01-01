@@ -33,7 +33,7 @@ const reducer = (state, action) => {
         state.mqtt[data.topic].splice(state.mqtt[data.topic].length - 1, 1);
       }
 
-      if (data.topic === "cone/door/outer/opened") {
+      if (data.topic === "door/outer/opened") {
         state.mqtt[data.topic].splice(0, 0, {
           name: data.message,
           time: `${now.getHours() < 10 ? "0" : ""}${now.getHours()}:${
@@ -59,7 +59,7 @@ const App = () => {
     socket.on("NOTIFICATION", obj => {
       const { integration, data } = obj;
 
-      if (integration === "mqtt" && data.topic === "cone/door/outer/opened") {
+      if (integration === "mqtt" && data.topic === "door/outer/opened") {
         setNotification(data.message);
         clearTimeout(notificationTimer);
         setNotificationTimer(

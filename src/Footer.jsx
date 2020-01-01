@@ -18,7 +18,7 @@ const Footer = ({ notification, open }) => {
   const state = React.useContext(DataContext);
   const data = state.mqtt ? state.mqtt : {};
 
-  const doorOpen = latestState(data["cone/door/outer/state"]) === "opened";
+  const doorOpen = latestState(data["door/outer/state"]) === "opened";
   return (
     <div className="Footer">
       {notification ? (
