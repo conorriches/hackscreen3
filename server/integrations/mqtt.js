@@ -1,7 +1,7 @@
 const Integration = require("./proto/Integration");
 const logger = require("../logger");
 const MQTT = require("mqtt");
-const Config = require("../../src/config.json");
+const Config = require("../../config.json");
 
 class mqtt extends Integration {
   constructor(callback) {

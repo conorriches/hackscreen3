@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Config from "./config.json";
+import Config from "../config.json";
 import classnames from "classnames";
 import * as ScreenSlides from "./Sidebars";
 

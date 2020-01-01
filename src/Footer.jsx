@@ -1,7 +1,7 @@
 import React from "react";
 import Clock from "./Components/Clock/Clock";
 import Notification from "./Footers/Notification/Notification";
-import Config from "./config.json";
+import Config from "../config.json";
 
 import DataContext from "./DataContext";
 

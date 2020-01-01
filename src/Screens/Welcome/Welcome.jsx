@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import "./Welcome.scss";
-import Config from "../../config.json";
+import Config from "../../../config.json";
 
 export default class Welcome extends Component {
   render() {

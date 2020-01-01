@@ -1,7 +1,7 @@
 const io = require("socket.io")();
 io.origins("*:*"); // for latest version
 
-const config = require("../src/config.json");
+const config = require("../config.json");
 const integrations = require("./integrations");
 var logger = require("./logger");
 

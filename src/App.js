@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useReducer } from "react";
 import openSocket from "socket.io-client";
 import classnames from "classnames";
-import Config from "./config.json";
+import Config from "../config.json";
 import Sidebar from "./Sidebar";
 import Screen from "./Screen";
 import Footer from "./Footer";

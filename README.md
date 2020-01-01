@@ -1,68 +1,32 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Hackscreen 3
 
-## Available Scripts
+Third iteration of Hackscreen - a hackable, pluggable community noticeboard. Designed for Hackspace Manchester, go ahead and make this work for your space or community.
 
-In the project directory, you can run:
+## Configuration
 
-### `npm start`
+The config needs to live in `/config.json`
+A sample `/config.example.json` is provided to guide you the right way.
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Development
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+#### Directories and key files
 
-### `npm test`
+- server
+  - integrations - add any data fetching or listening as a file in here
+- src
+  - Components - add any reusable components here
+  - Footers - Things that live in the footer
+  - Screens - Things that show on the main screen
+  - Sidebars - things that show on the sidebar
+  - App.scss - styles for the general screen
+  - App.js - this runs the app
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+#### Adding a Screen/Sidebar/Footer
 
-### `npm run build`
+For example, we want to create a `Name` `Screen`:
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+- Create a directory: `/src/Screens/Name`
+- Create `Name.jsx` and `Name.scss`
+- Pur your React and Sass in
+- update `/src/Screens/index.js` to export your new screen
+- Update the config file if you'd like for your screen to show
