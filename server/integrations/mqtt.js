@@ -1,6 +1,7 @@
 const Integration = require("./proto/Integration");
 const logger = require("../logger");
 const MQTT = require("mqtt");
+const Config = require("../../src/config.json");
 
 class mqtt extends Integration {
   constructor(callback) {
@@ -11,7 +12,7 @@ class mqtt extends Integration {
 
   async setup() {
     const thisClass = this;
-    this.client = MQTT.connect("mqtt://test.mosquitto.org");
+    this.client = MQTT.connect(Config.integrations.mqtt.server);
 
     thisClass.client.on("connect", function() {
       thisClass.client.subscribe("#", function(err) {
