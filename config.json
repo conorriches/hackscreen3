@@ -21,9 +21,9 @@
   },
   "main": {
     "screens": [
+      { "name": "Meeting", "time": 20 },
       { "name": "Welcome", "time": 1 },
-      { "name": "Metrolink", "time": 10 },
-      { "name": "Meeting", "time": 20 }
+      { "name": "Metrolink", "time": 10 }
     ]
   }
 }

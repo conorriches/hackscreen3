@@ -1,13 +1,26 @@
 # Hackscreen 3
 
 Third iteration of Hackscreen - a hackable, pluggable community noticeboard. Designed for Hackspace Manchester, go ahead and make this work for your space or community.
+![screenshot](./docs/screenshot.png)
 
 ## Configuration
 
 The config needs to live in `/config.json`
-A sample `/config.example.json` is provided to guide you the right way.
+A sample `/config.example.json` is provided to guide you the right way. Screens are processed in order listed and show the given number of seconds.
+
+The Footer is also where notifications are shown:
+
+- Notification (covers the whole Footer)
+- Jewel (a box in the footer that can "light up")
 
 ## Development
+
+#### Client/Server communication
+
+- The server runs integrations that can fetch data, listen to notifications, do actions.
+- Sockets are used to talk to the client.
+- The client then uses a React Provider to make data available to all files.
+- The data from integrations is namespaced according to the integration name
 
 #### Directories and key files
 
