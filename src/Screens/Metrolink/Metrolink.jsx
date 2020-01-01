@@ -10,7 +10,7 @@ const Metrolink = () => {
   return (
     <div className="Metrolink">
       <div className="Metrolink__Inner Metrolink__Header">
-        <img src="./images/metrolink.jpg" width="300" alt="metrolink logo" />
+        <img src="./images/metrolink.jpg" height="90" alt="metrolink logo" />
         <h3 className="Metrolink__Title">Holt Town</h3>
       </div>
       <div className="Metrolink__Inner">
