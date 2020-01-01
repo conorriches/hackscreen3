@@ -2,33 +2,33 @@
 
 .Screen {
   h1 {
-    font-size: 5em;
+    font-size: 7em;
     margin: 0;
   }
 
   h2 {
-    font-size: 3.5em;
+    font-size: 6em;
     margin: 0;
   }
 
   h3 {
-    font-size: 3em;
+    font-size: 5em;
     margin: 0;
   }
 }
 .Sidebar {
   h1 {
-    font-size: 3em;
+    font-size: 4em;
     margin: 0;
   }
 
   h2 {
-    font-size: 2em;
+    font-size: 4em;
     margin: 0;
   }
 
   h3 {
-    font-size: 1em;
+    font-size: 2em;
     margin: 0;
   }
 }
@@ -50,6 +50,8 @@
     width: 100%;
     display: grid;
     grid-template-areas:
+      "menu menu menu main main main main main main main main main"
+      "menu menu menu main main main main main main main main main"
       "menu menu menu main main main main main main main main main"
       "menu menu menu main main main main main main main main main"
       "menu menu menu main main main main main main main main main"
@@ -157,7 +159,7 @@
     display: inline-block;
     white-space: nowrap;
     padding-right: 100%;
-    animation: ticker 20s infinite linear;
+    animation: ticker 40s infinite linear;
 
     @keyframes ticker {
       0% {
