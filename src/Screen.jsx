@@ -9,7 +9,7 @@ class Screen extends Component {
     this.state = {
       screenIndex: 0,
       visible: true,
-      timeout: 0
+      timeoutId: 0
     };
   }
 
@@ -21,20 +21,23 @@ class Screen extends Component {
       setTimeout(() => {
         const lastIndex = Config.main.screens.length - 1;
         if (this.state.screenIndex === lastIndex) {
-          this.setState({ screenIndex: 0, visible: true });
+          this.setState({
+            screenIndex: 0,
+            visible: true
+          });
         } else {
           this.setState({
             screenIndex: this.state.screenIndex + 1,
             visible: true
           });
         }
-      }, 500);
+      }, 1500);
     } else {
-      if (this.state.timeout === 0) {
-        const timeout = setTimeout(() => {
-          this.setState({ visible: false, timeout: 0 });
+      if (this.state.timeoutId === 0) {
+        const timeoutId = setTimeout(() => {
+          this.setState({ visible: false, timeoutId: 0 });
         }, thisScreen.time * 1000);
-        this.setState({ timeout });
+        this.setState({ timeoutId });
       }
     }
     return (
@@ -43,7 +46,17 @@ class Screen extends Component {
           "Screen--Transition": !this.state.visible
         })}
       >
-        {Component && <Component />}
+        {this.state.visible && (
+          <div className="Screen__Timer-Wrapper">
+            <div
+              className={classnames(
+                `Screen__Timer--${thisScreen.time}`,
+                "Screen__Timer"
+              )}
+            ></div>
+          </div>
+        )}
+        <div className="Screen__Component">{Component && <Component />}</div>
       </div>
     );
   }

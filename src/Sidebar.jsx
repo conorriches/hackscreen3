@@ -28,7 +28,7 @@ class Sidebar extends Component {
             visible: true
           });
         }
-      }, 500);
+      }, 1500);
     } else {
       if (this.state.timeout === 0) {
         const timeout = setTimeout(() => {

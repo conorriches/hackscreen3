@@ -14,8 +14,8 @@ const Metrolink = () => {
         <h3 className="Metrolink__Title">Holt Town</h3>
       </div>
       <div className="Metrolink__Inner">
-        <TramPlatform title="Inbound" tramData={data.inbound} />
-        <TramPlatform title="Outbound" tramData={data.outbound} />
+        <TramPlatform title="Inbound" tramData={data.inbound || []} />
+        <TramPlatform title="Outbound" tramData={data.outbound || []} />
       </div>
       <div className="Metrolink__Inner">
         <span className="Metrolink__Message">{data.message}</span>
@@ -32,9 +32,7 @@ const TramPlatform = ({ tramData, title }) => {
     <div className="Metrolink__Platform">
       <h3>{title}</h3>
       <div className="Metrolink__Trams">
-        {tramData.length === 0 && (
-          <h3 className="Tram__Time">No trams in the next half hour</h3>
-        )}
+        {tramData.length === 0 && <h3>No trams in the next half hour</h3>}
         {!!tramData
           ? tramData.map(tram => {
               return (

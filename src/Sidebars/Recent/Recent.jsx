@@ -6,7 +6,7 @@ export default () => {
   const state = React.useContext(DataContext);
   const data = state.mqtt ? state.mqtt : {};
 
-  const recent = data["door/outer/opened"] || [];
+  const recent = data["door/outer/opened/username"] || [];
 
   return (
     <div className="Recent">

@@ -15,7 +15,7 @@ class mqtt extends Integration {
     this.client = MQTT.connect(Config.integrations.mqtt.server);
 
     thisClass.client.on("connect", function() {
-      thisClass.client.subscribe("#", function(err) {
+      thisClass.client.subscribe("door/outer/#", function(err) {
         logger.verbose("MQTT is connected");
         if (!err) {
           thisClass.client.publish("presence", "Hello mqtt");

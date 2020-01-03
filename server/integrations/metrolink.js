@@ -19,7 +19,7 @@ class metrolink extends Integration {
   async setup() {
     setInterval(() => {
       this.fetch();
-    }, 5000);
+    }, 30000);
 
     this.fetch();
     return 1;
@@ -50,9 +50,9 @@ class metrolink extends Integration {
           });
 
           if (platform.Direction === "Incoming") {
-            toReturn.outbound = tram;
-          } else {
             toReturn.inbound = tram;
+          } else {
+            toReturn.outbound = tram;
           }
           toReturn.message = platform.MessageBoard;
           toReturn.lastUpdated = platform.LastUpdated;

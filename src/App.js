@@ -21,7 +21,7 @@ const App = () => {
     socket.on("NOTIFICATION", obj => {
       const { integration, data } = obj;
 
-      if (integration === "mqtt" && data.topic === "door/outer/opened") {
+      if (integration === "mqtt" && data.topic === "door/outer/opened/username") {
         setNotification(data.message);
         clearTimeout(notificationTimer);
         setNotificationTimer(

@@ -24,7 +24,7 @@ export default (state, action) => {
         state.mqtt[data.topic].splice(state.mqtt[data.topic].length - 1, 1);
       }
 
-      if (data.topic === "door/outer/opened") {
+      if (data.topic === "door/outer/opened/username") {
         state.mqtt[data.topic].splice(0, 0, {
           name: data.message,
           time: `${now.getHours() < 10 ? "0" : ""}${now.getHours()}:${

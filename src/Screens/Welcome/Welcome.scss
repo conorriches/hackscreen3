@@ -1,13 +1,21 @@
 .Welcome {
   height: 100%;
-  background: rgba(255, 255, 255, 0.5);
+  background: repeating-linear-gradient(
+    45deg,
+    #ddd,
+    #ddd 2em,
+    #fff 2em,
+    #fff 4em
+  );
 
   &__Inner {
     margin: 3em;
+  }
 
-    h1 {
-      margin: 0 auto;
-      text-align: center;
-    }
+  &__Title {
+    margin: 0 auto;
+    background: yellow;
+    white-space: pre-wrap;
+    display: inline;
   }
 }
