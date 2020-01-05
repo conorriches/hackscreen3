@@ -10,8 +10,4 @@ express.get("/ping", function(req, res) {
   return res.send("pong");
 });
 
-express.get("/", function(req, res) {
-  res.sendFile(path.join(__dirname, "../", "src", "index.html"));
-});
-
 express.listen(process.env.PORT || 5000);

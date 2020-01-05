@@ -10,6 +10,10 @@ export default (state, action) => {
       return Object.assign({}, state, {
         metrolink: data
       });
+    case "football":
+      return Object.assign({}, state, {
+        football: data
+      });
     case "mqtt":
       if (!state.mqtt) {
         state.mqtt = {};
@@ -38,6 +42,6 @@ export default (state, action) => {
       }
       return Object.assign({}, state);
     default:
-      throw new Error();
+      console.error("Unknown type in reducer", type);
   }
 };

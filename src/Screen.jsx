@@ -56,7 +56,22 @@ class Screen extends Component {
             ></div>
           </div>
         )}
-        <div className="Screen__Component">{Component && <Component />}</div>
+        <div className="Screen__Component">
+          {Component ? (
+            <Component />
+          ) : (
+            <>
+              <h3>
+                Error loading screen - did you export it in
+                /src/Screens/index.js?
+              </h3>
+              <h3>
+                Nothing found with name:
+                {thisScreen.name}
+              </h3>
+            </>
+          )}
+        </div>
       </div>
     );
   }
