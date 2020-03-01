@@ -2,7 +2,7 @@
   "name": "Hackspace Manchester",
   "integrations": {
     "mqtt": {
-      "server": "mqtt://172.16.0.20",
+      "server": "mqtt://172.16.0.5",
       "maxMessagesPerTopic": 5
     }
   },
@@ -15,15 +15,20 @@
   },
   "sidebar": {
     "screens": [
-      { "name": "Metrolink", "time": 20 },
+      { "name": "News", "time": 5 },
+      { "name": "Metrolink", "time": 5 },
       { "name": "Recent", "time": 20 }
     ]
   },
   "main": {
     "screens": [
-      { "name": "Meeting", "time": 20 },
-      { "name": "Welcome", "time": 1 },
-      { "name": "Metrolink", "time": 10 }
+      { "name": "Metrolink", "time": 15 },
+      { "name": "Football", "time": 5 },
+      { "name": "Welcome", "time": 10 },
+      { "name": "Metrolink", "time": 5 },
+      { "name": "Snackspace", "time": 5 },
+      { "name": "WiFi", "time": 10 },
+      { "name": "Meeting", "time": 15 }
     ]
   }
 }
