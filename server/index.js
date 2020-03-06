@@ -9,6 +9,7 @@ const app = new App();
 express.use(cors());
 
 express.use(Express.static("build"));
+express.use(Express.static("static"));
 
 express.get("/ping", function(req, res) {
   return res.send("pong");
