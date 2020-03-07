@@ -4,6 +4,9 @@
     "mqtt": {
       "server": "test.mosquitto.org",
       "maxMessagesPerTopic": 5
+    },
+    "metrolink": {
+      "key": ""
     }
   },
   "notification": {

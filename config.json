@@ -4,6 +4,9 @@
     "mqtt": {
       "server": "mqtt://172.16.0.5",
       "maxMessagesPerTopic": 5
+    },
+    "metrolink": {
+      "key": ""
     }
   },
   "notification": {

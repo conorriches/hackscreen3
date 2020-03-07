@@ -8,8 +8,7 @@ const cors = require("cors");
 const app = new App();
 express.use(cors());
 
-express.use(Express.static("build"));
-express.use(Express.static("static"));
+express.use(Express.static(path.join(__dirname, "../", "build")));
 
 express.get("/ping", function(req, res) {
   return res.send("pong");

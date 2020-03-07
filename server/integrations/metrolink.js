@@ -1,6 +1,7 @@
 const Integration = require("./proto/Integration");
 const logger = require("../logger");
 const axios = require("axios");
+const Config = require("../../config.json");
 
 class metrolink extends Integration {
   constructor(callback) {
@@ -11,7 +12,7 @@ class metrolink extends Integration {
       baseURL: "https://api.tfgm.com/odata",
       timeout: 1000,
       headers: {
-        "Ocp-Apim-Subscription-Key": process.env.METROLINK_API_KEY
+        "Ocp-Apim-Subscription-Key": Config.integrations.metrolink.key
       }
     });
   }
