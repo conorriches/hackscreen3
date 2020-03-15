@@ -20,7 +20,7 @@ export default () => {
             </b>
           </h3>
         ) : (
-          <h3>No trams in the next half hour</h3>
+          <h3>For live times, visit tfgm.com</h3>
         )}
       </div>
     );

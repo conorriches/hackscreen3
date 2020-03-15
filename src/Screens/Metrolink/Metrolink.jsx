@@ -32,7 +32,7 @@ const TramPlatform = ({ tramData, title }) => {
     <div className="Metrolink__Platform">
       <h3>{title}</h3>
       <div className="Metrolink__Trams">
-        {tramData.length === 0 && <h3>No trams in the next half hour</h3>}
+        {tramData.length === 0 && <h3>For live times, visit tfgm.com</h3>}
         {!!tramData
           ? tramData.map(tram => {
               return (
