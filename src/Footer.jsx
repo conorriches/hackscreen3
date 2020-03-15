@@ -28,15 +28,14 @@ const Footer = ({ notification, open }) => {
           <div className="Footer__Jewel">
             <Clock />
           </div>
-          {doorOpen ||
-            (true && (
-              <div className="Footer__Jewel Footer__Jewel--danger">
-                <span role="img" aria-label="door">
-                  🚪
-                </span>
-                door open
-              </div>
-            ))}
+          {doorOpen && (
+            <div className="Footer__Jewel Footer__Jewel--danger">
+              <span role="img" aria-label="door">
+                🚪
+              </span>
+              door open
+            </div>
+          )}
           {!doorOpen && (
             <div className="Footer__Ticker-Wrapper">
               <div className="Footer__Ticker">

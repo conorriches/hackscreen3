@@ -17,22 +17,11 @@ export default () => {
 
           return (
             <li>
-              {item.name} <small>{item.time}</small>
+              <div className="Recent__Name"> {item.name} </div>
+              <div className="Recent__Time"> {item.time}</div>
             </li>
           );
         })}
-        <li>
-          <div className="Recent__Name">Test</div>
-          <div className="Recent__Time">20:20</div>
-        </li>
-        <li>
-          <div className="Recent__Name">Test</div>
-          <div className="Recent__Time">20:20</div>
-        </li>
-        <li>
-          <div className="Recent__Name">Test</div>
-          <div className="Recent__Time">20:20</div>
-        </li>
       </ul>
     </div>
   );
