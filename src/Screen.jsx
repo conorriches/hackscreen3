@@ -31,7 +31,7 @@ class Screen extends Component {
             visible: true
           });
         }
-      }, 1500);
+      }, 10);
     } else {
       if (this.state.timeoutId === 0) {
         const timeoutId = setTimeout(() => {

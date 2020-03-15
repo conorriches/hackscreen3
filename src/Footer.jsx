@@ -36,15 +36,6 @@ const Footer = ({ notification, open }) => {
               door open
             </div>
           )}
-          {!doorOpen && (
-            <div className="Footer__Ticker-Wrapper">
-              <div className="Footer__Ticker">
-                <div className="Footer__Ticker-Content">
-                  Welcome to {Config.name}
-                </div>
-              </div>
-            </div>
-          )}
         </>
       )}
     </div>
