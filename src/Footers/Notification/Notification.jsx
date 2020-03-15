@@ -13,7 +13,7 @@ class Notification extends Component {
           <span className="Notification__type">
             {this.props.type === "entered" && "🔑"}
           </span>
-          <span className="Notification__message">{this.props.message}</span>
+          <span className="Notification__message">{message}</span>
         </div>
       </div>
     );

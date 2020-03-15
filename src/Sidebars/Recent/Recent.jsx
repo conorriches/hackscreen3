@@ -17,7 +17,9 @@ export default () => {
 
           return (
             <li>
-              <div className="Recent__Name"> {item.name} </div>
+              <div className="Recent__Name">
+                {decodeURIComponent(item.name)}
+              </div>
               <div className="Recent__Time"> {item.time}</div>
             </li>
           );
