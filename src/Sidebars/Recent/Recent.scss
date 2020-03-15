@@ -5,6 +5,16 @@
       margin: 0;
     }
 
+    &__Name {
+      color: black;
+      font-size: 5rem;
+    }
+
+    &__Time {
+      margin-top: 0.1em;
+      font-size: 0.8em;
+      color: #555;
+    }
     ul {
       padding: 0;
       list-style: none;
@@ -12,16 +22,8 @@
 
       li {
         padding: 0.1em;
-        color: black;
         margin-bottom: 0.5em;
-        font-size: 3em;
-
-        small {
-          float: right;
-          margin-top: 0.1em;
-          font-size: 0.8em;
-          color: #555;
-        }
+        font-size: 4rem;
       }
     }
   }

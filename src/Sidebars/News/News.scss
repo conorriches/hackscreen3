@@ -1,0 +1,44 @@
+.Sidebar {
+  .News {
+    background: white;
+    &__Title {
+      font-size: 5em;
+    }
+  }
+
+  .Announcement {
+    font-size: 3em;
+    background: white;
+    padding: 0.2em;
+    border-left: 0.2em solid red;
+
+    &--Urgent {
+      background: red;
+    }
+
+    &__Message {
+      padding: 0.2em;
+    }
+    &__Urgent {
+      background: black;
+      color: red;
+      padding: 0.2em;
+      animation: urgent 5s linear infinite;
+
+      @keyframes urgent {
+        0% {
+          background-color: black;
+        }
+        5% {
+          background-color: yellow;
+        }
+        95% {
+          background-color: yellow;
+        }
+        100% {
+          background-color: black;
+        }
+      }
+    }
+  }
+}
